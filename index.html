@@ -30,17 +30,28 @@
             <!--End Header Here -->
             </header>
 
-         <ol id="posts">
-            {block:Posts}
-                        {block:Title}
-                            <h3><a href="{Permalink}">{Title}</a></h3>
-                        {/block:Title}
-            {/block:Posts}
 
+                <div id="main">
 
+                    <div id="content">
+                        
+                        <div class="post_list">
+                            <ul>
+                                 {block:Posts}
+                                        {block:Text}
+                                            <li>
+                                                {block:Title}
+                                                    <h3><a class="pjax" href="{Permalink}">{Title}</a></h3>
+                                                {/block:Title}
 
+                                                {Body}
+                                            </li>
+                                        {/block:Text}
+                                        <hr />
+                                 {/block:Posts}       
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-
-
-        </ol>
     </body>
