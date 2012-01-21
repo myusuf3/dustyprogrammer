@@ -1,0 +1,46 @@
+<html>
+    
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/d2qly4ubi/css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/Jt9ly4ua5/normalize.css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/302ly4uay/friendly.css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/USVly4ub8/dmpayton.css">
+
+    <head>
+        <title>{Title}</title>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{Favicon}">
+        <!-- rss -->
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+            <!--Start Header Here -->
+                <h1><a class="pjax" href="http://www.mahdiyusuf.com">Mahdi Yusuf</a></h1>
+                <nav>
+                    <a class="pjax" href="">Activity</a>
+                    <a class="pjax" href="">Writing</a>
+                    <a class="pjax" href="">Projects</a>
+                    <a class="pjax" href="">About</a>
+                    <a class="pjax" href="">Résumé</a>
+                </nav>
+            <!--End Header Here -->
+            </header>
+
+         <ol id="posts">
+            {block:Posts}
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+            {/block:Posts}
+
+
+
+
+
+
+        </ol>
+    </body>
