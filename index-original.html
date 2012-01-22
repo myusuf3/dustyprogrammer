@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="en">
+<head> 
+	<!--
+		Theme designed for: http://www.mahdiyusuf.com
+	-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<title>{Title}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
+	<meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{PostSummary}{/block:PermalinkPage}" />
+        <meta name="google-site-verification" content="HJan5psCDrdte3agbfKz4Q4Svf3yceahJnmSnhzWDj0" />
+        <meta name="if:Show Google Plus One Buttons" content="0" />
+        <meta name="if:Show Tweet Button" content="0" />
+
+<!-- Update your html tag to include the itemscope and itemtype attributes -->
+<html itemscope itemtype="http://www.mahdiyusuf.com">
+
+
+<!-- Add the following three tags inside head -->
+<meta itemprop="name" content="{Title}">
+<meta itemprop="description" content="{PostSummary}">
+        
+
+	<meta name="author" content="www.mahdiyusuf.com">
+	<meta name="text:Disqus Shortname" content="" />
+	<link rel="alternate" type="application/rss+xml" href="{RSS}">
+   
+	<!--	CSS Stylesheet: 960 Grid System (http://960.gs) -->
+    <link rel="stylesheet" href="http://static.tumblr.com/hj8qm7y/hRBla5qxd/960.css" type="text/css" charset="utf-8" />
+
+	<!--	CSS Stylesheet: @font-face fonts: Bebas and Univers with base64 encoding -->
+    	<link rel="stylesheet" href="http://static.tumblr.com/rarxflm/ErUlae9d3/typography.css" type="text/css" charset="utf-8"/>
+
+	<!--	Javascript: jQuery Javascript 1.4.3, jQueryTweet(http://tweet.seaofclouds.com/) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script language="javascript" src="http://static.tumblr.com/rarxflm/KWWlagumi/jquery.tweet.js" type="text/javascript"></script>  
+  <script type='text/javascript'>
+    $(document).ready(function(){
+      $("#tweets").tweet({
+        username: "myusuf3",
+        count: 3,
+        loading_text: "loading tweets..."
+      });
+    });
+  </script>	
+	
+	<style type="text/css">
+	/* RESET CSS: Resets all elements to default so we can apply our custom styles  */
+	html, body, div, span, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	abbr, address, cite, code,
+	del, dfn, em, img, ins, kbd, q, samp,
+	small, strong, sub, sup, var,
+	b, i,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, figure, footer, header, 
+	hgroup, menu, nav, section, menu,
+	time, mark, audio, video {
+	  margin:0;
+	  padding:0;
+	  border:0;
+	  outline:0;
+	  font-size:100%;
+	  vertical-align:baseline;
+	  background:transparent;}
+	article, aside, figure, figure img, figcaption, hgroup,
+	footer, header, nav, section, video, object { display: block; }                  
+	a img {border: 0;}
+	figure {position: relative;}
+	figure img {width: 100%;}
+	nav ul { list-style:none; }
+	blockquote, q { quotes:none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after { content:''; content:none; }
+	a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+	input, select { vertical-align:middle; }
+	/* END RESET CSS */
+
+	/* CUSTOM STYLES */
+	html, body { 
+		height:100%; } 
+	html { 
+		-webkit-font-smoothing: antialiased; }
+	#wrap {
+		height: auto; min-height: 100%; } /*Uses sticky footer: http://www.cssstickyfooter.com/ */
+	body, select, input, textarea { 
+		color:#4c4c4c; }
+	body { 
+		background: #FFF; } 
+	h1 { font-size: 2em; } h2 { font-size: 1.8em; } h3 { font-size: 1.6em; } h4 { font-size:1.4em; } h5 { font-size: 1.2em; } h6 { font-size:1em; } 
+	h1,h2,h3,h4,h5,h6 { 
+		font-weight: 400; text-rendering: optimizeLegibility; }
+	p { 
+		padding-bottom: 15px; }
+  ul { margin-left:30px; }
+  ol { list-style-type: decimal; margin-left:30px; padding: 15px 0; }
+	a:hover, a:active { 
+		outline: none; }
+	a, a:active, a:visited { 
+		color:#4c4c4c; text-decoration: none; }
+	a:hover {
+		 background: #B30D1F; color: #FFF; }
+
+	body { 
+		color: #444; 
+		font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+		font-size-adjust: 0.47;
+		font-size:14px/1.5;  
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1.4em; 
+		text-align:left; }
+	.chat .even { 
+		background: #dfe2e3; padding: 5px; }
+	.chat .odd { 
+		background: #f1f2f3; padding: 5px; }
+	.chat .label { 
+		font-weight: 500; }
+	.codeblock { 
+		background: #ebebeb; 
+		border: 1px #b4b4b4 solid; 
+		color: #323232; 
+		display: block;
+		padding: 30px; }
+	.current_page {
+	  color: #888!important; }
+  .current_page, .page_number, .next, .prev {
+    background: #4b4b4b;
+    color: #FFF;
+    display: inline-block;
+    padding: 2px 8px; }
+  .current_page a, .page_number a, .next a, .prev a {
+    color: #FFF; }
+	.link { 
+		display: block; padding: 10px 0; }
+	.notes_container{
+	  padding-left: 40px; }
+	.notes_header { 
+	  padding-top: 30px; }
+	.notes_icon {
+    background: transparent url('http://static.tumblr.com/rarxflm/QYWlcde4e/likes-off.png') no-repeat center top;
+    display: block;
+    height: 32px; }
+	.notes_icon span {
+    font-size: 0.75em;
+    line-height: 0.9em;
+    position: absolute;
+    text-align: center;
+    top: 75px; 
+    width: 40px;}
+	.notes_icon:hover {
+    background: transparent url('http://static.tumblr.com/rarxflm/nYQlcde55/likes-hover.png') no-repeat center top;
+    color: #9e0b0f;
+    display: block;
+    height: 32px; }
+	.post { 
+	  border-bottom: 1px dotted #c3c3c3;
+	  display: block;
+	  overflow: hidden;
+		padding: 65px 0; } 
+	.post_header { 
+		padding-bottom: 20px; }
+	.post_icon {
+	  margin: 0 auto;
+	  padding-top: 5px; 
+	  width: 32px; }
+	.post_icon a:hover {
+	  background: none;
+	  opacity: 0.3;	}
+	.post_title {
+		color: #4b4b4b; 
+		font-family: 'UniversLT45LightItalic', "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+		font-size-adjust: 0.5;
+		font-size: 1.8em;
+		font-style: normal;
+		font-weight: 200;
+		line-height: normal;
+		padding-bottom: 5px;
+		text-rendering: optimizelegibility; 	}		
+	.post_date { 
+		color: #4b4b4b; 
+		text-transform: uppercase; }
+	.post_body { 
+		display: block; 
+		overflow: hidden; }
+	.post_body a { 
+		color: #b30d1f; }
+	.post_body a:hover {
+		 color: #FFFFFF; }
+  .photo_link:hover { background: none;}
+	.post_body img { 
+		margin: 0 20px; 
+		padding: 17px; }
+	.post_body .caption, 
+	.post_body .description { 
+		padding-top: 10px; }
+	.post_body .video { 
+		margin: 0 auto; }
+	.post_footer { 
+		padding-top: 20px; }
+	.post_comments,
+	.post_tags,
+	.reblogged { 
+		padding-bottom: 10px; }
+	.post_comments a { 
+		color: #b30d1f; 
+		font-weight: 500; 
+		text-transform: uppercase; }
+	.post_comments a:hover { 
+		color: #FFFFFF; }
+	.post_tags a { 
+		color: #969696; }
+	.post_tags a:hover { 
+	  color: #FFFFFF; }
+	.search_results {
+		padding-top: 40px; 
+		text-transform: uppercase; }
+  .tweet_text a:hover {
+  	  color: #FFFFFF; }
+	.quote, .link {
+		font-size: 25px; }
+	.quote_source { 
+		font-style: italic; }	
+	#about_author { 
+		font-size: 0.9em; 
+		line-height: normal; }
+	#about_author img { 
+		border: 1px solid #B2B2B2; 
+		float: left; 
+		margin-right: 10px; 
+		padding: 3px; }
+	#contact_form {
+		height: 340px!important; }
+	#copyright {
+		font-size: 0.9em; 
+		padding: 10px 0;}
+	#footer { 
+		background-color: #222222; 
+		clear: both;
+		color: #969696; 
+		height: 455px;
+		margin-top: -455px;
+		overflow: hidden;
+		padding-top: 40px; 
+		position: relative; }
+	#footer h6 { 
+		color: #FFFFFF;
+		font-family: 'BebasRegular', "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+		font-size-adjust: 1.2;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.02em;	
+		line-height:normal;
+		text-transform: uppercase; }
+	#footer_contact h6 { 
+	  font-size: 43px;
+	  height: 60px;
+	  line-height: 0.5em;
+	  padding-left: 155px; }		
+	#footer_twitter img {
+		 float: left; 
+		 margin-right: 10px; }
+ 	#footer_twitter_img:hover,
+ 	#footer h6:hover { 
+ 	  opacity: 0.5; }
+	#header { 
+		overflow: hidden; 
+		padding-top: 40px; }
+	#logo a:hover { 
+	  background: none; }	
+	#main { 
+		overflow: auto; 
+		padding-bottom: 570px; 
+		position: relative; }
+	#main-navigation {	
+		color: #222222; 
+		text-rendering: optimizelegibility;
+		padding-top: 95px;	}
+	#main-navigation ul { 
+		list-style: none; 
+		margin: 0; 
+		padding: 0; }
+	#main-navigation li { 
+		float: left; 
+		font-size: 0.95em;
+		padding-right: 1em; 
+		position: relative; 
+		text-transform: uppercase; }
+	#main-navigation li ul { 
+		display: none; 
+		position: absolute; 
+		top: 1em; 
+		left: 0; }
+	#main-navigation li > ul { 
+		left: auto; 
+		top: auto; }
+	#main-navigation li:hover ul, 
+	li.over ul { 
+		display:  block; 
+		color: #B30D1F; }
+	#nav { 
+		float: right; 
+		text-transform: uppercase; 
+		padding-bottom: 50px; }
+	#nav a { 
+		font-weight: 500; }
+	#pagination {
+	  float: right;
+	  padding: 10px 0;}
+	#projects { 
+		width: 4.7em; }
+	#tweets .tweet_time a {
+		display: block; 
+		color: #FFFFFF; 
+		font-size: 0.75em; }
+	#reviews { 
+		padding: 0; 
+		width: 4.2em; }
+	#search, 
+	#about_author { 
+		padding: 35px 0 20px 0; }
+	#search-text { 
+		padding: 5px; 
+		width: 150px; }
+	#search-submit { 
+		background: #000000; 
+		border: 1px solid #000000; 
+		color: #FFFFFF; 
+		margin-top: 5px; 
+		padding: 8px; 
+		text-transform: uppercase; 
+		width: 166px; }
+	#search-submit:hover { 
+		background: #333333;
+		border: 1px solid #222222;
+		opacity: 0.8; }
+	#sidebar {
+	  height: 500px; 
+	  padding-top:16px;
+		position: absolute; }
+	#sidebar h6 { 
+		text-transform: uppercase; 
+		padding: 10px 0 15px 0; }
+	#social-media { 
+		line-height: 0; }
+	#social-media a { 
+		display: inline-block; 
+		overflow: hidden; }
+	#social-media a:hover { 
+		opacity: 0.8; }
+	#tagpage {
+	  padding: 20px 0 0 10px;	}
+	#tagpage h4 {
+	  color: #222222;
+		font-family: 'BebasRegular', "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+		font-size-adjust: 1.2;
+    font-size:1.5em;
+		font-style: normal;
+		font-weight: normal;
+		line-height:normal;
+		text-transform: uppercase; }
+	#tweets ul {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0; }
+  #tweets li { 
+    padding: 15px 0;}
+	#tweets .tweet_text{
+		color #969696; 
+	  font-size: 0.85em; }
+	#videos { 
+		width: 3.5em; } 
+	/* END CUSTOM STYLES */	
+	</style>
+<link id="agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiJ1wYM" rel="stylesheet" type="text/css" href="http://www.webputty.net/css/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiJ1wYM" />
+<script type="text/javascript" src="http://www.webputty.net/js/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiJ1wYM"></script>
+</head>
+
+<body>
+	<div id="wrap" class="container_16">
+		<div id="main">
+		
+    <div id="left" class="grid_12 suffix_1">
+		  
+		<!--	BEGIN HEADER: container for Logo, Main Navigation, and Social Media links	-->
+			<div id="header">
+			
+				<div id="logo" class="grid_5">
+				    	<div><a href="http://www.mahdiyusuf.com"><img src="http://static.tumblr.com/rarxflm/yUAlad9zu/logo.gif"></a></div>
+				</div><!--end#logo-->
+				
+				<div id="main-navigation" class="grid_6">
+					{block:HasPages}
+					<ul>
+					{block:Pages}
+					<!-- Displays all Tumblr Pages -->
+						<li id="{label}"><a href="{URL}">{Label}</a></li>
+					{/block:Pages} 
+					<!-- Display Tag pages for: Projects, Video, Reviews -->
+					<li id="projects"><a href="http://dustyprogrammer.tumblr.com/tagged/projects">Projects</a></li>{/block:Pages}
+					<li id="video"><a href="http://dustyprogrammer.tumblr.com/tagged/videos">Videos</a></li>{/block:Pages}
+					<li id="reviews"><a href="http://dustyprogrammer.tumblr.com/tagged/reviews">Reviews</a></li>{/block:Pages}
+					</ul>
+					{/block:HasPages}
+				</div><!--end#main-navigation-->
+			</div><!--end#header-->
+		<!--	END HEADER	-->
+			
+			
+		<!--	BEGIN BLOG CONTENT: this section is structured based on post type: Text,  Photo, Quote, etc. (http://www.tumblr.com/docs/en/custom_themes)	-->
+			<div id="blog-content">
+			
+			<!--TAG PAGE -->
+        {block:TagPage} 
+          <div id="tagpage">
+            <h4>Tagged: {Tag}</h4>
+          </div><!--end#tagpage-->
+        {/block:TagPage}
+			<!--END TAG PAGE -->
+
+			<!--SEARCH PAGE -->
+				{block:SearchPage}
+				<div class="search_results">
+					{SearchResultCount} results for: {SearchQuery}
+				</div>
+				{/block:SearchPage}
+			<!--END SEARCH PAGE -->
+			
+			
+			{block:Posts}
+			
+			<!--	BEGIN: TEXT	-->
+				{block:Text}
+				<div class="post">
+				  
+				  <div class="grid_1">
+            <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/x6slaq648/text.gif" /></a>
+            </div><!--end.post_icon-->
+            <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} Notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+&nbsp;
+{block:IfShowGooglePlusOneButtons}
+<g:plusone size="medium"></g:plusone>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+{/block:IfShowGooglePlusOneButtons}
+
+{block:IfShowTweetButton}
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="myusuf3">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+{/block:ifShowTweetButton}
+
+          </div>
+
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_title">
+    						{block:Title}
+    						<a href="{Permalink}">{Title}</a>
+    						{/block:Title}
+    					</div>
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					{Body}
+    					{block:More}
+    						<a href="{Permalink}">Read More</a>
+    					{/block:More}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+					
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Text}
+			<!--	END: TEXT	-->
+				
+			<!--	BEGIN: PHOTO	-->
+				{block:Photo}
+				<div class="post">
+				  
+				  <div class="grid_1">
+    			  <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/iOJlaq63b/photo.gif" /></a>
+    			  </div><!--end.post_icon-->
+            <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}
+&nbsp;
+</span>
+            </a><!--end.notes_icon-->
+          </div>
+			  
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    				  <a href="{LinkURL}" class="photo_link">
+    				    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+    				  </a>
+    					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+					
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Photo}
+			<!--	END: PHOTO	-->
+				
+			<!--	BEGIN: PHOTOSET	-->
+				{block:Photoset} 
+				<div class="post">
+				  
+				  <div class="grid_1">
+    			  <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/iOJlaq63b/photo.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+          </div>
+			  
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					{Photoset-500}
+    					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+					
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Photoset}
+			<!--	END: PHOTOSET	-->
+				
+			<!--	BEGIN: QUOTE	-->
+				{block:Quote}
+				<div class="post">
+				  
+				  <div class="grid_1">
+    			  <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/yTplaq63t/quote.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+			  
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					 <blockquote class="quote">
+    					 	{Quote}
+    					 </blockquote>					
+    					{block:Source}
+    						<div clas="quote_source">&mdash;&#8194;{Source}</div>
+    					{/block:Source}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+					
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Quote}
+			<!--	END: QUOTE	-->
+			
+			<!--	BEGIN: LINK	-->
+				{block:Link} 
+				<div class="post">
+				  
+				  <div class="grid_1">
+    			  <div class="post_icon">
+    			    <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/lfQlaq6yj/link.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+          </div>
+			  
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					<a href="{URL}" class="link" {Target}>{Name}</a>
+    					{block:Description}
+    					   {Description}
+    					{/block:Description}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+					
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Link}
+			<!--	END: LINK	-->
+			
+			<!--	BEGIN: CHAT	-->
+				{block:Chat} 
+			  <div class="post">
+			    
+			    <div class="grid_1">
+    			  <div class="post_icon">
+    				  <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/Glylaq62r/chat.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+			  
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_title">
+    						{block:Title}
+    						<a href="{Permalink}">{Title}</a>
+    						{/block:Title}
+    					</div>
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					<ul class="chat">
+    					   {block:Lines}
+    					       <li class="{Alt} user_{UserNumber}">
+    							 {block:Label}
+    							     <span class="label">{Label}</span>
+    							 {/block:Label}
+    							{Line}
+    					       </li>
+    					   {/block:Lines}
+    					</ul>
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+					
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Chat}
+			<!--	END: CHAT	-->
+			
+			<!--	BEGIN: AUDIO	-->
+				{block:Audio}
+				<div class="post">
+				  
+				  <div class="grid_1">
+    			  <div class="post_icon">
+    				  <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/YUplaq61r/audio.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+			  
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body audio">
+              {AudioPlayerGrey}
+              {block:ExternalAudio}<a href="{ExternalAudioURL}" target="_blank">Source</a>{/block:ExternalAudio}
+    					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+					
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+        </div><!--end.post-->
+				{/block:Audio}
+			<!--	END: LINK	-->
+			
+			<!--	BEGIN: VIDEO	-->
+				{block:Video} 
+				<div class="post">
+				  
+				  <div class="grid_1">
+    			  <div class="post_icon">
+    				  <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/p96laq657/video.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+			  
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body video">
+    					{Video-500}
+    					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}									
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+					
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Video}
+			<!--	END: VIDEO	-->
+			
+			<!--	BEGIN: ANSWER	-->
+				{block:Answer}
+				<div class="post">
+				  
+				  <div class="grid_1">
+            <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/x6slaq648/text.gif" /></a>
+            </div><!--end.post_icon-->
+            <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+        
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					<div class="question">{Question}</div>
+    					<div class="asker">
+    						<img src="{AskerPortraitURL-24}">{Asker}
+    					</div>
+    					<div>{Answer}</div>
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+					
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Answer}
+			<!--	END: ANSWER	-->
+			
+			<!--PERMALINK PAGE -->
+				{block:PermalinkPage}
+					{block:IfDisqusShortname}
+					<div class="separator secondary"></div>
+					<div id="disqus_thread" class="content"></div>
+					<script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script><noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+					{/block:IfDisqusShortname}
+					
+				{/block:PermalinkPage}
+			<!--END PERMALINK PAGE-->
+			{/block:Posts}
+
+			<!-- PAGINATION-->				
+				{block:PermalinkPagination}
+				<div id="nav">
+					{block:PreviousPage}
+						<h6><a href="{PreviousPage}" class="prev">{lang:Previous page}</a></h6>
+					{/block:PreviousPage}
+					{block:NextPage}
+						<h6><a href="{NextPage}" class="next">{lang:Next page}</a></h6>
+					{/block:NextPage}
+				</div><!--end#nav-->
+				{/block:PermalinkPagination}
+				
+        {block:Pagination}
+          <div id="pagination">
+            {block:PreviousPage}
+            <div class="prev"><a href="{PreviousPage}">Previous</a></div>
+            {/block:PreviousPage}
+
+            {block:JumpPagination length="5"}
+              {block:CurrentPage}
+                 <div class="current_page">{PageNumber}</div>
+              {/block:CurrentPage}
+
+              {block:JumpPage}
+                 <div class="page_number"><a class="jump_page" href="{URL}">{PageNumber}</a></div>
+              {/block:JumpPage}
+            {/block:JumpPagination}
+
+            {block:NextPage}
+            <div class="next"><a href="{NextPage}">Next</a></div>
+            {/block:NextPage}
+          </div><!--end#pagination-->
+        {/block:Pagination}
+			<!--END  PAGINATION-->	
+
+			</div><!--end#blog-content-->
+		<!--	END BLOG CONTENT	-->
+			
+    </div><!--end#left-->
+
+			
+			
+		<!--	BEGIN SIDEBAR: container for Search form, About Author, and Tags	-->
+			<div id="sidebar" class="grid_3">
+				<div id="about_author">
+					<img src="{PortraitURL-48}" />
+					{block:Description}
+						<div class="description">
+						{Description}
+						</div>
+					{/block:Description}
+				</div><!--end#about_author-->
+
+				<div id="social-media">
+				    	<a href="http://www.twitter.com/myusuf3" style="float: left;"><img src="http://static.tumblr.com/rarxflm/P2lla9lvl/twitter.gif"></a>
+				    	<a href="http://github.com/myusuf3"><img src="http://static.tumblr.com/rarxflm/cS5la9ly0/git.gif"></a>
+				    	<a href="http://www.about.me/mahdiyusuf" style="float: left;"><img src="http://static.tumblr.com/rarxflm/RIOlada40/about.me.gif"></a>
+				    	<a href="http://www.facebook.com/yusuf.mahdi"><img src="http://static.tumblr.com/rarxflm/SChla9lxm/fb.gif"></a>
+				</div><!--end#social-media-->
+
+
+				<div id="search"> 
+					<form action="/search" method="get">
+					<input id="search-text" type="text" name="q" value="{SearchQuery}"/>
+					<input id="search-submit" type="submit" value="Search Blog"/>
+					</form>
+				</div><!--end#search-->
+				
+				{block:AskEnabled}
+					<a href="/ask">{AskLabel}</a>
+				{/block:AskEnabled}
+				{block:SubmissionsEnabled}
+					<a href="/submit">{SubmitLabel}</a>
+				{/block:SubmissionsEnabled}
+			</div><!--end#sidebar-->
+		<!--	END SIDEBAR	-->
+
+		</div><!-#main-->
+	</div><!-#wrap-->
+
+
+
+<!--	BEGIN FOOTER: container for Wufoo Contact form, Twitter Feed	-->
+	<div id="footer">
+		<div id="footer_container" class="container_16">
+		
+		<div id="footer_contact" class="grid_8">
+			<h6>Contact Me</h6>
+			<div id="contact_form">
+				<script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
+				<script type="text/javascript">
+				var z7x4a3 = new WufooForm();
+				z7x4a3.initialize({
+				'userName':'myusuf3', 
+				'formHash':'z7x4a3', 
+				'autoResize':true,
+				'height':'417'});
+				z7x4a3.display();
+				</script>
+			</div>
+			<div id="copyright">
+				&copy;<script type="text/javascript"> var d = new Date(); document.write(d.getFullYear()); </script> Mahdi Yusuf. All rights reserved.
+			</div>    			
+		</div><!--end#contact_form -->
+		
+		{block:Twitter}
+		<div id="footer_twitter" class="prefix_2 grid_4">
+			<a id="footer_twitter_img" href="http://twitter.com/{TwitterUsername}">
+				<img src="http://static.tumblr.com/hj8qm7y/t2Nla5zxg/footer-twitter.gif" />
+				<h6>Follow Me</h6>
+			</a>
+			<div id="tweets"></div>
+		</div><!--end#footer_twitter-->
+		{/block:Twitter}
+		
+		</div><!--#footer_container-->
+	</div><!--#footer-->
+<!--	END FOOTER	-->
+
+
+<!--	BEGIN SCRIPTS FOR DISQUS 	-->
+	{block:IfDisqusShortname}
+		<script type="text/javascript">
+		//<![CDATA[
+		(function() {
+		var links = document.getElementsByTagName('a');
+		var query = '?';
+		for(var i = 0; i < links.length; i++) {
+		if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		  query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+		}
+		}
+		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+		})();
+		//]]>
+		</script>
+	{/block:IfDisqusShortname}
+<!--	END SCRIPTS FOR DISQUS 	-->
+	
+	
+</body>
+</html>
