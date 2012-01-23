@@ -39,16 +39,38 @@
                         <!-- Text -->
                         {block:Title}
                             <h1><a href="{Permalink}">{Title}</a></h1>
-                            <h3>{block:Date} 
+                        {/block:Title}
+                                                    <h3>{block:Date} 
                                 {DayOfWeek}, {Month} {DayOfMonth}, {Year}
                             {/block:Date}</h3>
-                        {/block:Title}
                         </div>
                         <div class="content">
                         {block:Text}
                         {Body}
-                            <a href="https://twitter.com/myusuf3" class="twitter-follow-button" data-show-count="true">Follow @myusuf3</a>
+                        {block:More}
+                            <a href="{Permalink}">Read More</a>
+                        {/block:More}
+                        {block:PermalinkPage} 
+                           <div class="tags">
+                         {block:HasTags}
+                         This post is filed under 
+                            {block:Tags}
+                                <a class="pjax" href="{TagURL}">#{Tag}</a>
+                            {/block:Tags}
+                        {/block:HasTags}
+                        <br />
+
+                    </div>
+
+
+                        <hr />
+    <p>If you enjoyed what you read, I would consider <a href="{RSS}">subscribing</a>. I am sure there is more awesome to be found. </p>
+                                    <a href="https://twitter.com/myusuf3" class="twitter-follow-button" data-show-count="true">Follow @myusuf3</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+                        {/block:PermalinkPage}
+                      
                         {/block:Text}
                         <!-- end Text -->
                         </div>
@@ -68,6 +90,27 @@
                 {Caption}
             {/block:Caption}
             <br />
+            <p><a href="{Permalink}">Discussion</a></p>
+              {block:PermalinkPage} 
+                           <div class="tags">
+                         {block:HasTags}
+                         This post is filed under 
+                            {block:Tags}
+                                <a class="pjax" href="{TagURL}">#{Tag}</a>
+                            {/block:Tags}
+                        {/block:HasTags}
+                        <br />
+
+                    </div>
+
+
+                        <hr />
+    <p>If you enjoyed what you read, I would consider <a href="{RSS}">subscribing</a>. I am sure there is more awesome to be found. </p>
+                                    <a href="https://twitter.com/myusuf3" class="twitter-follow-button" data-show-count="true">Follow @myusuf3</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+                        {/block:PermalinkPage}
             {/block:Photo}
             <!-- end Photo -->
 
@@ -80,6 +123,26 @@
                     {/block:Source}
 
             <p><a href="{Permalink}">Discussion</a></p>
+            {block:PermalinkPage} 
+                           <div class="tags">
+                         {block:HasTags}
+                         This post is filed under 
+                            {block:Tags}
+                                <a class="pjax" href="{TagURL}">#{Tag}</a>
+                            {/block:Tags}
+                        {/block:HasTags}
+                        <br />
+
+                    </div>
+
+
+                        <hr />
+    <p>If you enjoyed what you read, I would consider <a href="{RSS}">subscribing</a>. I am sure there is more awesome to be found. </p>
+                                    <a href="https://twitter.com/myusuf3" class="twitter-follow-button" data-show-count="true">Follow @myusuf3</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+                        {/block:PermalinkPage}
             {/block:Quote}
             <!-- end Quote -->
 
@@ -87,10 +150,32 @@
             <!-- Link -->
         {block:Link}
         <br />
-        <h3><a href=”{URL}” class=”link” {Target}>{Name}</a></h3>
+        <h3><a href="{URL}">{Name}</a></h3>
                 {block:Description}
                     <p>{Description}</p>
                 {/block:Description}
+            <br />
+                <p><a href="{Permalink}">Discussion</a></p>
+                {block:PermalinkPage} 
+                           <div class="tags">
+                         {block:HasTags}
+                         This post is filed under 
+                            {block:Tags}
+                                <a class="pjax" href="{TagURL}">#{Tag}</a>
+                            {/block:Tags}
+                        {/block:HasTags}
+                        <br />
+
+                    </div>
+
+
+                        <hr />
+    <p>If you enjoyed what you read, I would consider <a href="{RSS}">subscribing</a>. I am sure there is more awesome to be found. </p>
+                                    <a href="https://twitter.com/myusuf3" class="twitter-follow-button" data-show-count="true">Follow @myusuf3</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+                        {/block:PermalinkPage}
         {/block:Link}
         <!-- end Link -->
 
@@ -101,6 +186,28 @@
             {block:Caption}
                 {Caption}
             {/block:Caption}
+            <br />
+            <p><a href="{Permalink}">Discussion</a></p>
+            {block:PermalinkPage} 
+                           <div class="tags">
+                         {block:HasTags}
+                         This post is filed under 
+                            {block:Tags}
+                                <a class="pjax" href="{TagURL}">#{Tag}</a>
+                            {/block:Tags}
+                        {/block:HasTags}
+                        <br />
+
+                    </div>
+
+
+                        <hr />
+    <p>If you enjoyed what you read, I would consider <a href="{RSS}">subscribing</a>. I am sure there is more awesome to be found. </p>
+                                    <a href="https://twitter.com/myusuf3" class="twitter-follow-button" data-show-count="true">Follow @myusuf3</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+                        {/block:PermalinkPage}
         {/block:Video}
         <!-- end Video -->
 
@@ -116,18 +223,53 @@
                     {Caption}
                 {/block:Caption}
             <br />
+            <p><a href="{Permalink}">Discussion</a></p>
+            {block:PermalinkPage} 
+                           <div class="tags">
+                         {block:HasTags}
+                         This post is filed under 
+                            {block:Tags}
+                                <a class="pjax" href="{TagURL}">#{Tag}</a>
+                            {/block:Tags}
+                        {/block:HasTags}
+                        <br />
+
+                    </div>
+
+
+                        <hr />
+    <p>If you enjoyed what you read, I would consider <a href="{RSS}">subscribing</a>. I am sure there is more awesome to be found. </p>
+                                    <a href="https://twitter.com/myusuf3" class="twitter-follow-button" data-show-count="true">Follow @myusuf3</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+                        {/block:PermalinkPage}
         {/block:Audio}
         <!-- end Audio -->
 
 
-        <hr />
-        <p>If you enjoyed what you read, I would consider <a href="{RSS}">subscribing</a>. I am sure there is more awesome to be found. </p>
+                <hr />
+        
+                    
+                    {PostNotes} 
+                    {block:PermalinkPage} 
+                        {block:IfDisqusShortname}
+                            <a href="{Permalink}#disqus_thread">View Comments</a>
+                        {/block:IfDisqusShortname}
+                    {/block:PermalinkPage} 
 
+                    {block:IfDisqusShortname}
+                    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script><noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+                    {/block:IfDisqusShortname}
+                    
                         {/block:Posts}
                    </div>
                 </div>
             </div>
 
+<br />
 <footer><span>Copyright 2012 Mahdi Yusuf</span><br><a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a></footer>
         </div>
+
     </body>
+    </html>

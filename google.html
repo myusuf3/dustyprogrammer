@@ -1,0 +1,567 @@
+			{block:Posts}
+
+			<!--	BEGIN: TEXT	-->
+				{block:Text}
+				<div class="post">
+
+				  <div class="grid_1">
+            <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/x6slaq648/text.gif" /></a>
+            </div><!--end.post_icon-->
+            <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} Notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+&nbsp;
+{block:IfShowGooglePlusOneButtons}
+<g:plusone size="medium"></g:plusone>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+{/block:IfShowGooglePlusOneButtons}
+
+{block:IfShowTweetButton}
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="myusuf3">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+{/block:ifShowTweetButton}
+
+          </div>
+
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_title">
+    						{block:Title}
+    						<a href="{Permalink}">{Title}</a>
+    						{/block:Title}
+    					</div>
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					{Body}
+    					{block:More}
+    						<a href="{Permalink}">Read More</a>
+    					{/block:More}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Text}
+			<!--	END: TEXT	-->
+
+			<!--	BEGIN: PHOTO	-->
+				{block:Photo}
+				<div class="post">
+
+				  <div class="grid_1">
+    			  <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/iOJlaq63b/photo.gif" /></a>
+    			  </div><!--end.post_icon-->
+            <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}
+&nbsp;
+</span>
+            </a><!--end.notes_icon-->
+          </div>
+
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    				  <a href="{LinkURL}" class="photo_link">
+    				    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+    				  </a>
+    					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Photo}
+			<!--	END: PHOTO	-->
+
+			<!--	BEGIN: PHOTOSET	-->
+				{block:Photoset} 
+				<div class="post">
+
+				  <div class="grid_1">
+    			  <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/iOJlaq63b/photo.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+          </div>
+
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					{Photoset-500}
+    					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Photoset}
+			<!--	END: PHOTOSET	-->
+
+			<!--	BEGIN: QUOTE	-->
+				{block:Quote}
+				<div class="post">
+
+				  <div class="grid_1">
+    			  <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/yTplaq63t/quote.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					 <blockquote class="quote">
+    					 	{Quote}
+    					 </blockquote>					
+    					{block:Source}
+    						<div clas="quote_source">&mdash;&#8194;{Source}</div>
+    					{/block:Source}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Quote}
+			<!--	END: QUOTE	-->
+
+			<!--	BEGIN: LINK	-->
+				{block:Link} 
+				<div class="post">
+
+				  <div class="grid_1">
+    			  <div class="post_icon">
+    			    <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/lfQlaq6yj/link.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+          </div>
+
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					<a href="{URL}" class="link" {Target}>{Name}</a>
+    					{block:Description}
+    					   {Description}
+    					{/block:Description}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Link}
+			<!--	END: LINK	-->
+
+			<!--	BEGIN: CHAT	-->
+				{block:Chat} 
+			  <div class="post">
+
+			    <div class="grid_1">
+    			  <div class="post_icon">
+    				  <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/Glylaq62r/chat.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_title">
+    						{block:Title}
+    						<a href="{Permalink}">{Title}</a>
+    						{/block:Title}
+    					</div>
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					<ul class="chat">
+    					   {block:Lines}
+    					       <li class="{Alt} user_{UserNumber}">
+    							 {block:Label}
+    							     <span class="label">{Label}</span>
+    							 {/block:Label}
+    							{Line}
+    					       </li>
+    					   {/block:Lines}
+    					</ul>
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Chat}
+			<!--	END: CHAT	-->
+
+			<!--	BEGIN: AUDIO	-->
+				{block:Audio}
+				<div class="post">
+
+				  <div class="grid_1">
+    			  <div class="post_icon">
+    				  <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/YUplaq61r/audio.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body audio">
+              {AudioPlayerGrey}
+              {block:ExternalAudio}<a href="{ExternalAudioURL}" target="_blank">Source</a>{/block:ExternalAudio}
+    					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+        </div><!--end.post-->
+				{/block:Audio}
+			<!--	END: LINK	-->
+
+			<!--	BEGIN: VIDEO	-->
+				{block:Video} 
+				<div class="post">
+
+				  <div class="grid_1">
+    			  <div class="post_icon">
+    				  <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/p96laq657/video.gif" /></a>
+    			  </div><!--end.post_icon-->
+    			  <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body video">
+    					{Video-500}
+    					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}									
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Video}
+			<!--	END: VIDEO	-->
+
+			<!--	BEGIN: ANSWER	-->
+				{block:Answer}
+				<div class="post">
+
+				  <div class="grid_1">
+            <div class="post_icon">
+              <a href="{Permalink}"><img src="http://static.tumblr.com/rarxflm/x6slaq648/text.gif" /></a>
+            </div><!--end.post_icon-->
+            <a class="notes_icon" href="{Permalink}">
+              <span>{block:NoteCount}{NoteCount} notes{/block:NoteCount}</span>
+            </a><!--end.notes_icon-->
+  			  </div>
+        
+  				<div class="post_content grid_10">
+    				<div class="post_header">
+    					<div class="post_date">
+    						{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}	
+    					</div>
+    				</div><!--end.post_header-->
+    				<div class="post_body">
+    					<div class="question">{Question}</div>
+    					<div class="asker">
+    						<img src="{AskerPortraitURL-24}">{Asker}
+    					</div>
+    					<div>{Answer}</div>
+    				</div><!--end.post_body-->
+    				<div class="post_footer">
+              {block:RebloggedFrom}
+              <div class="reblogged">
+              </div>
+              {/block:RebloggedFrom}
+
+    					{block:IfDisqusShortname}
+              <div class="post_comments">
+                <a href="{Permalink}#disqus_thread">View Comments</a>
+              </div>
+    					{/block:IfDisqusShortname}
+
+    					{block:HasTags}
+              <div class="post_tags">
+                Tagged:
+                {block:Tags}
+                <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+    					{/block:HasTags}
+
+    					{block:PostNotes}
+    					<h2 class="notes_header">Notes</h2>
+    					<div class="notes_container">
+    						{PostNotes}        
+    					</div>
+    					{/block:PostNotes}
+    				</div><!--end.post_footer-->
+  				</div><!--end.post_content-->
+  			</div><!--end.post-->
+				{/block:Answer}
+			<!--	END: ANSWER	-->
+
+			<!--PERMALINK PAGE -->
+				{block:PermalinkPage}
+					{block:IfDisqusShortname}
+					<div class="separator secondary"></div>
+					<div id="disqus_thread" class="content"></div>
+					<script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script><noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+					{/block:IfDisqusShortname}
+
+				{/block:PermalinkPage}
+			<!--END PERMALINK PAGE-->
+			{/block:Posts}
