@@ -1,10 +1,10 @@
 <DOCTYPE html >
 <html itemscope itemtype="http://schema.org/Blog">
     
-    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/d2qly4ubi/css">
-    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/Jt9ly4ua5/normalize.css">
-    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/302ly4uay/friendly.css">
-    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/USVly4ub8/dmpayton.css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/rarxflm/5Drlyljhg/css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/rarxflm/FzOlyljkq/normalize.css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/rarxflm/WXllyljj0/friendly.css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/rarxflm/wIglyljjo/dmpayton.css">
     <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
     <style>
 .linkbait {    
@@ -23,6 +23,17 @@
 {
     float:left;
 }
+
+.notes ol
+{
+list-style-type:none;
+}
+
+#carbonads-container{
+    position:absolute;
+    top:56px;
+    right:200px;
+}
     </style>
 
     
@@ -37,6 +48,37 @@
         <link rel="shortcut icon" href="{Favicon}">
         <!-- rss -->
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        <meta name="text:Disqus Shortname" content="" />
+
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16383952-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4edd18bb613f5d534b000005');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
     </head>
     <body>
         <div id="wrapper">
@@ -44,15 +86,20 @@
             <!--Start Header Here -->
                 <h1><a class="pjax" href="http://www.mahdiyusuf.com">Mahdi Yusuf</a></h1>
                 <nav>
-                    <a class="pjax" href="">Activity</a>
-                    <a class="pjax" href="">Writing</a>
-                    <a class="pjax" href="">Projects</a>
-                    <a class="pjax" href="">About</a>
-                    <a class="pjax" href="">Résumé</a>
+                    <a class="pjax" href="/">Writing</a>
+                    <a class="pjax" href="/projects">Projects</a>
+                    <a class="pjax" href="/about">About</a>
+                    <a class="pjax" href="http://www.github.com/myusuf3">Résumé</a>
                 </nav>
 
             <!--End Header Here -->
             </header>
+            <div id="carbonads-container">
+                <div class="carbonad">
+                    <div id="azcarbon"></div>
+                    <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/13986/azcarbon_2_1_0_VERT"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+                </div>
+            </div>
             <div id="main">
                 <div id="content" class="writing">
                     <div class="post_detail">
@@ -248,10 +295,24 @@
                                     </div>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
+
+
                     {/block:PermalinkPage}
                     
+                    <div class="notes">
                     {PostNotes} 
-          
+                    </div>
+                   
+
+                        {block:PermalinkPage}
+                             <hr />
+
+                    {block:IfDisqusShortname}
+                    <div id="disqus_thread" class="content"></div>
+                    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script><noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+                    {/block:IfDisqusShortname}
+
+                     {/block:PermalinkPage}
 
                     
                         {/block:Posts}
@@ -276,9 +337,28 @@
 {/block:Pagination}
 
 <br />
-<footer><span>Copyright 2012 Mahdi Yusuf</span><br><a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a></footer>
+<footer><span>Copyright 2012 Mahdi Yusuf</span><br>Errrrday I be programmin' (oh and hustlin' too)</footer>
         </div>
 
+
+<!--    BEGIN SCRIPTS FOR DISQUS    -->
+    {block:IfDisqusShortname}
+        <script type="text/javascript">
+        //<![CDATA[
+        (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+        })();
+        //]]>
+        </script>
+    {/block:IfDisqusShortname}
+<!--    END SCRIPTS FOR DISQUS  -->
 
 
     </body>
