@@ -1,24 +1,16 @@
-<DOCTYPE html>
-<html>
+<DOCTYPE html >
+<html itemscope itemtype="http://schema.org/Blog">
     
-    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/d2qly4ubi/css">
-    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/Jt9ly4ua5/normalize.css">
-    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/302ly4uay/friendly.css">
-    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/fqt2ntq/USVly4ub8/dmpayton.css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/rarxflm/5Drlyljhg/css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/rarxflm/FzOlyljkq/normalize.css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/rarxflm/WXllyljj0/friendly.css">
+    <link type="text/css" rel="stylesheet" href="http://static.tumblr.com/rarxflm/wIglyljjo/dmpayton.css">
     <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
-    <script type="text/javascript">
-          (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/plusone.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-          })();
-    </script>
-
     <style>
 .linkbait {    
     background-color: #EDEDED;
     border-radius: 5px;
-    font-size: 80%;
+    font-size: 100%;
     padding: 10px;
 }
 
@@ -31,20 +23,66 @@
 {
     float:left;
 }
+
+.notes ol
+{
+list-style-type:none;
+}
+
+#carbonads-container {
+    position: absolute;
+    top: 57px;
+    left: 664px;
+}
+
+header{
+    position:relative;
+}
     </style>
 
-    <meta itemprop="name" content="{Title}">
-<meta itemprop="description" content="{MetaDescription}">
+    
 
     <head>
-        <title>{Title}</title>
+        <meta itemprop="name" content="{Title}{block:PostSummary}: {PostSummary}{/block:PostSummary}">
+        {block:Description}
+            <meta itemprop="description" content="{block:PostSummary}{PostSummary}{/block:PostSummary}" />
+        {/block:Description}
+        <title>{Title}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
         <!-- favicon -->
         <link rel="shortcut icon" href="{Favicon}">
         <!-- rss -->
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
-        {block:Description}
-            <meta name="description" content="{MetaDescription}" />
-        {/block:Description}
+        <meta name="text:Disqus Shortname" content="" />
+
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16383952-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4edd18bb613f5d534b000005');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
     </head>
     <body>
         <div id="wrapper">
@@ -52,15 +90,21 @@
             <!--Start Header Here -->
                 <h1><a class="pjax" href="http://www.mahdiyusuf.com">Mahdi Yusuf</a></h1>
                 <nav>
-                    <a class="pjax" href="">Activity</a>
-                    <a class="pjax" href="">Writing</a>
-                    <a class="pjax" href="">Projects</a>
-                    <a class="pjax" href="">About</a>
-                    <a class="pjax" href="">Résumé</a>
+                    <a class="pjax" href="/">Writing</a>
+                    <a class="pjax" href="/projects">Projects</a>
+                    <a class="pjax" href="/about">About</a>
+                    <a class="pjax" href="http://www.github.com/myusuf3">Résumé</a>
                 </nav>
 
+                <div id="carbonads-container">
+                <div class="carbonad">
+                    <div id="azcarbon"></div>
+                    <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/13986/azcarbon_2_1_0_VERT"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+                </div>
+            </div>
             <!--End Header Here -->
             </header>
+         
             <div id="main">
                 <div id="content" class="writing">
                     <div class="post_detail">
@@ -84,13 +128,10 @@
                         <div class="tags">
                          This post is filed under 
                             {block:Tags}
-                             
                                 <a class="pjax" href="{TagURL}">#{Tag}</a>
-                               
                             {/block:Tags}
-                             </div>
+                            </div>
                         {/block:HasTags}
-                    <br />
                 <p><a href="{Permalink}">Discussion</a></p>
                             <hr />
                         {block:More}
@@ -100,7 +141,7 @@
                            
 
 
-   <div class="linkbait">
+  <!--  <div class="linkbait">
     If you enjoyed what you read, I would consider <a href="{RSS}">subscribing</a>. I am sure there is more awesome to be found.
     <br /><br />
                                     <a href="https://twitter.com/myusuf3" class="twitter-follow-button" data-show-count="true">Follow @myusuf3</a>
@@ -108,15 +149,15 @@
                                     <g:plusone></g:plusone>
                                     </div>
                                     
-                                    </div>
+                                    </div> 
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
+-->
 
                         {/block:PermalinkPage}
                       
                         {/block:Text}
                         <!-- end Text -->
-                        </div>
+                        <!-- </div> -->
 
             <!-- Photo -->
             {block:Photo}
@@ -132,9 +173,8 @@
             {block:Caption}
                 {Caption}
             {/block:Caption}
-            <br />
             <p><a href="{Permalink}">Discussion</a></p>
-                            
+                            <hr />
               {block:PermalinkPage} 
                          {block:HasTags}
                          <div class="tags">
@@ -158,10 +198,7 @@
                          <h3>-- {Source}</h3>
                     {/block:Source}
 
-            <p><a href="{Permalink}">Discussion</a></p>
-                            <hr />
-            {block:PermalinkPage} 
-                         {block:HasTags}
+                          {block:HasTags}
                          <div class="tags">
                          This post is filed under 
                             {block:Tags}
@@ -171,6 +208,12 @@
                             {/block:Tags}
                             </div>
                         {/block:HasTags}
+
+
+            <p><a href="{Permalink}">Discussion</a></p>
+                            <hr />
+            {block:PermalinkPage} 
+
                         {/block:PermalinkPage}
             {/block:Quote}
             <!-- end Quote -->
@@ -183,12 +226,7 @@
                 {block:Description}
                     <p>{Description}</p>
                 {/block:Description}
-            <br />
-                <p><a href="{Permalink}">Discussion</a></p>
-                                <hr />
-
-                {block:PermalinkPage} 
-              {block:HasTags}
+                        {block:HasTags}
                          <div class="tags">
                          This post is filed under 
                             {block:Tags}
@@ -196,7 +234,9 @@
                             {/block:Tags}
                             </div>
                         {/block:HasTags}
-                {/block:PermalinkPage}
+
+                <p><a href="{Permalink}">Discussion</a></p>
+                                <hr />
         {/block:Link}
         <!-- end Link -->
 
@@ -211,7 +251,14 @@
             <p><a href="{Permalink}">Discussion</a></p>
                             <hr />
             {block:PermalinkPage} 
-
+                    {block:HasTags}
+                         <div class="tags">
+                         This post is filed under 
+                            {block:Tags}
+                                <a class="pjax" href="{TagURL}">#{Tag}</a>
+                            {/block:Tags}
+                            </div>
+                        {/block:HasTags}
             {/block:PermalinkPage}
         {/block:Video}
         <!-- end Video -->
@@ -229,7 +276,7 @@
                 {/block:Caption}
             <br />
             <p><a href="{Permalink}">Discussion</a></p>
-                          
+                            <hr />
             {block:PermalinkPage} 
                     {block:HasTags}
                          <div class="tags">
@@ -243,10 +290,38 @@
         {/block:Audio}
         <!-- end Audio -->
 
+                    {block:PermalinkPage} 
+
+                                               <div class="linkbait">
+    If you enjoyed what you read, I would consider <a href="{RSS}">subscribing</a>. I am sure there is more awesome to be found.
+    <br /><br />
+                                    <a href="https://twitter.com/myusuf3" class="twitter-follow-button" data-show-count="true">Follow @myusuf3</a>
+                                    
+                                    </div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+                    {/block:PermalinkPage}
+                    
+                    <div class="notes">
                     {PostNotes} 
-          
-                    {/block:PermalinkPage} 
+                    </div>
+                   
+
+                        {block:PermalinkPage}
+                             <hr />
+
+                    {block:IfDisqusShortname}
+                    <div id="disqus_thread" class="content"></div>
+                    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script><noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+                    {/block:IfDisqusShortname}
+
+                     {/block:PermalinkPage}
+
+                    
                         {/block:Posts}
+                        </div>
                    </div>
                 </div>
             </div>
@@ -267,8 +342,9 @@
 {/block:Pagination}
 
 <br />
-<footer><span>Copyright 2012 Mahdi Yusuf</span><br><a href="http://creativecommons.org/licenses/by/3.0/us/" rel="nofollow">Some Rights Reserved</a></footer>
+<footer><span>Copyright 2012 Mahdi Yusuf</span><br>Errrrday I be programmin' (oh and hustlin' too)</footer>
         </div>
+
 
 <!--    BEGIN SCRIPTS FOR DISQUS    -->
     {block:IfDisqusShortname}
