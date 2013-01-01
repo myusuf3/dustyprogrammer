@@ -64,14 +64,16 @@ header{
 }
     </style>
 
-    
+
 
     <head>
         <meta itemprop="name" content="{Title}{block:PostSummary}: {PostSummary}{/block:PostSummary}">
         {block:Description}
             <meta itemprop="description" content="{block:PostSummary}{PostSummary}{/block:PostSummary}" />
         {/block:Description}
-        <title>{Title}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
+        
+
+        <title>{block:PostSummary}{PostSummary} --{block:PostSummary} {Title}</title>
         <!-- favicon -->
         <link rel="shortcut icon" href="{Favicon}">
         <!-- rss -->
@@ -383,7 +385,7 @@ header{
 {/block:Pagination}
 
 <br />
-<footer><span>Copyright 2012 Mahdi Yusuf</span><br>Errrrday I be programmin' (oh and hustlin' too)</footer>
+<footer><span>Copyright 2012   <a href="https://plus.google.com/101298799284458952523/posts?rel=author">Mahdi Yusuf</a></span><br>Errrrday I be programmin' (oh and hustlin' too)</footer>
         </div>
 
 
